@@ -30,6 +30,7 @@ funcs.forEach((f) => f());
 
 // 이를 해결하기 위해서는 출력될 변수를 강제로 copy 하도록 해주는
 // IIFE(Immediately Invoked Function Expressions) 즉시 실행함수 표현을 사용해야한다.
+// 즉시실행하여 해당 함수에 closure 스코프에 파라마터 값이 복사되도록함
 var funcs = [];
 for (var i = 0; i < 10; i++) {
   funcs.push(

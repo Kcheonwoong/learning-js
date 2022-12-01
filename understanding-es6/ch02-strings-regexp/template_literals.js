@@ -17,6 +17,7 @@ console.log(template1.length);
 console.log(template2);
 console.log(template2.length);
 
+// --------------------------------------------------------------
 // tagged template
 // template literal 에 변형을 추가 하여 문자열을 리턴한다.
 // 아래의 tag 는 template literal 의 기본적인 동작이 적용되어있음F
