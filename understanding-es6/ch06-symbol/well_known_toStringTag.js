@@ -9,7 +9,7 @@
 function isArray(value) {
   return Object.prototype.toString.call(value) === "[object Array]";
 }
-console.log(isArray([])); // true
+console.log(isArray([]));
 
 function Person(name) {
   this.name = name;
@@ -18,6 +18,7 @@ function Person(name) {
 var me = new Person("Nicholas");
 console.log(me.toString());
 
+// Symbol.toStringTag
 Person.prototype[Symbol.toStringTag] = "Person";
 console.log(me.toString());
 

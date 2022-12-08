@@ -1,5 +1,3 @@
-const { threadId } = require("worker_threads");
-
 /**
  * iterable is an object with a [Symbol.iterator] property.
  *

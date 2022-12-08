@@ -1,4 +1,6 @@
 /**
+ * with(){...}
+ * 
  * The Symbol.unscopables symbol is used on Array.prototype to indicate
  * which properties shouldn’t create bindings inside a with statement.
  */
