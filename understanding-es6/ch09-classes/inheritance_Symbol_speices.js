@@ -7,23 +7,9 @@
  * Behind the scenes, the Symbol.species property is actually making this change.
  * 내부적으로 Symbol.species 가 동작하기 때문이다.
  *
- */
-
-class MyArray extends Array {
-  // empty
-}
-let items = new MyArray(1, 2, 3, 4),
-  subitems = items.slice(1, items.length);
-
-console.log(subitems);
-
-console.log(items instanceof MyArray); // true
-// MyArray 클래스의 인스턴스로 리턴됨
-console.log(subitems instanceof MyArray); // true
-
-/**
+ * 
  * [Symbol.species]
- *
+ * 
  * The Symbol.species well-known symbol is used to define a static accessor property that returns a function.
  * That function is a constructor to use whenever an instance of the class must be created inside an instance method
  * (instead of using the constructor).
@@ -39,6 +25,18 @@ console.log(subitems instanceof MyArray); // true
  * Set
  * Typed arrays
  */
+
+class MyArray extends Array {
+  // empty
+}
+let items = new MyArray(1, 2, 3, 4),
+  subitems = items.slice(1, items.length);
+
+console.log(subitems);
+
+console.log(items instanceof MyArray); // true
+// MyArray 클래스의 인스턴스로 리턴됨
+console.log(subitems instanceof MyArray); // true
 
 // several built-in types use species similar to this
 class MyClass {

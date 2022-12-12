@@ -1,4 +1,6 @@
 /**
+ * class extends
+ *
  * You can use extends with any expression as long as
  * the expression resolves to a function with [[Construct]] and a prototype.
  */

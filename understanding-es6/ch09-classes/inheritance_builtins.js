@@ -18,7 +18,7 @@ console.log(colors[0]); // undefined
  isn’t covered by either Array.apply() or assigning the prototype.
  */
 function MyArray() {
-  // this 가 먼저 생성된 후, Array.apply를 호출
+  // MyArray this 가 먼저 생성된 후, Array.apply를 호출
   Array.apply(this, arguments);
 }
 MyArray.prototype = Object.create(Array.prototype, {
@@ -46,4 +46,4 @@ console.log(arr.length);
 
 arr.length = 0;
 // 기존 Array와 동일하게 동작함
-console.log(arr[0]);
+console.log(arr[0]); // undefined
