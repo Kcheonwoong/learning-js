@@ -10,15 +10,16 @@ Rect.prototype.getArea = function () {
 };
 
 /**
+ * ES5에서의 prototype 상속 방법
 Square inherits from Rectangle, and to do so, 
 it must overwrite Square.prototype with a new object created from Rectangle.prototype 
 as well as call the Rectangle.call() method
  */
-// Rect에 속성 바인딩
+// 1. binding
 function Square(length) {
   Rect.call(this, length, length);
 }
-// Square prototype 정의
+// 2. define Prototype
 Square.prototype = Object.create(Rect.prototype, {
   constructor: {
     value: Square,
